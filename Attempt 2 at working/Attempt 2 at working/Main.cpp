@@ -149,7 +149,7 @@ void Levelup()
 	PlayerSpeed = PFuzzlingsLevel + 2;
 	//SP
 	PlayersSP = PFuzzlingsLevel * 2;
-
+	EXP = 0;
 }
 
 void NameingFuzzling()
@@ -524,6 +524,12 @@ void ChangeingLocation()
 
 }
 
+void Restorestats()
+{
+	PlayerHealth = PMaxhealth;
+	PlayersSP = PMaxSP;
+}
+
 void PlayerWinsTheFight()
 {
 	cout << "Congratulations you won the fight" << endl;
@@ -572,6 +578,7 @@ void PlayerWinsTheFight()
 
 
 	}
+	Restorestats();
 	FuzzlingStats();
 	ChangeingLocation();
 }
