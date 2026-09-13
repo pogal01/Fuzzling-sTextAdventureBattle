@@ -94,8 +94,8 @@ void FuzzlingStats();
 void RechargeSP();
 void Dodge();
 void SpecialAttack();
-//
-
+//Foward declaration
+void RandomEncounter();
 
 
 void ValidateChar() //I could only put the basic one which doen't do anything if the user enters that appart from loop as a function.
@@ -112,7 +112,7 @@ void ValidateChar() //I could only put the basic one which doen't do anything if
 
 }
 
-void RandomGenerator()  //where the code for the random generator is. 
+int RandomGenerator()  //where the code for the random generator is. 
 {
 	mt19937 generator;
 	generator.seed(time(0));
@@ -122,7 +122,7 @@ void RandomGenerator()  //where the code for the random generator is.
 	int random = dice(generator);
 
 	RandomGenAnswer = random;
-
+	return RandomGenAnswer;
 }
 
 
@@ -520,6 +520,7 @@ void ChangeingLocation()
 			cout << "Answer invalid please enter one of the letters in the brackets" << endl;
 		}
 
+		RandomEncounter();
 	}
 
 }
@@ -543,9 +544,9 @@ void PlayerWinsTheFight()
 	}
 
 
-	EXP = EXP + 250;
+	EXP += 250;
 	cout << "You gained 250exp in that fight only " <<500 - EXP<<"Remains untill you level up" <<endl;
-	cout << "You aslo gained 100 coins your total amout of coins is now " << coins << " You can't buy anything with them though as I haven't programed that part yet" << endl;
+	cout << "You also gained 100 coins your total amout of coins is now " << coins << " You can't buy anything with them though as I haven't programed that part yet" << endl;
 	RandomInt = 1;
 	RandomInt2 = 5;
 	RandomGenerator();
@@ -587,8 +588,8 @@ void PlayerLoses()
 {
 	cout << endl;
 	cout << endl;
-	cout << "You unfortunetly lost the battel and was forced to run back to the lab as fast as you could" << endl;
-	cout << "The good news is that your fuzzling is ok and ready to battle again" << endl;
+	cout << "You unfortunetly lost the battle and was forced to run back to the lab as fast as you could" << endl;
+	cout << "The good news! Your fuzzling is ok and ready to battle again" << endl;
 	ChangeingLocation();
 }
 
@@ -1546,7 +1547,7 @@ int main()
 	cout << nameOfIntroductionGuy << " Oh right, I forgot thanks for reminding me" << endl;
 	cout << nameOfIntroductionGuy << " I was supposed to give you a basic Fuzzling" << endl;
 	cout << yourDisplayName << " Basic Fuzzling? You mean to tell me there is more ?" << endl;
-	cout << nameOfIntroductionGuy << " Yes Fuzzlings come with many different types which have unique abilities."<<endl<<"They can also have strengths and weaknesses against other types." << endl<<"Your fuzzling is also able to evolve into different types and has no strengths or weaknesses because its basic so hasen't evolved yet" << endl;
+	cout << nameOfIntroductionGuy << " Yes Fuzzlings come with many different types which have unique abilities."<<endl<<"They can also have strengths and weaknesses against other types." << endl<<"Your fuzzling is also able to evolve into different types and has no strengths or weaknesses because its basic so has not evolved yet" << endl;
 	cout << nameOfIntroductionGuy << " Anyway, here is your fuzzling" << endl;
 	NameingFuzzling();
 	cout << " Your Fuzzling is officaly called " << nameOfFirstFuzzling << endl;
@@ -1580,7 +1581,7 @@ int main()
 	while(true)
 	{
 	ChangeingLocation();
-	RandomEncounter();
+	//RandomEncounter();
 	}
 
 

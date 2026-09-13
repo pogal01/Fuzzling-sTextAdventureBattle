@@ -1,3 +1,4 @@
-﻿  Main.cpp
-D:\Don't forget about this\Uni\Codeing\Games\The Fuzzling's text adventure battle\Fuzzling-sTextAdventureBattle\Attempt 2 at working\Attempt 2 at working\Main.cpp(118,21): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  Attempt 2 at working.vcxproj -> D:\Don't forget about this\Uni\Codeing\Games\The Fuzzling's text adventure battle\Fuzzling-sTextAdventureBattle\Attempt 2 at working\x64\Debug\Attempt 2 at working.exe
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(534,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (Attempt 2 at working.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  Main.cpp
+C:\Users\pogal\Desktop\All my stuff\My games\Fuzzling-sTextAdventureBattle\Attempt 2 at working\Attempt 2 at working\Main.cpp(118,21): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Attempt 2 at working.vcxproj -> C:\Users\pogal\Desktop\All my stuff\My games\Fuzzling-sTextAdventureBattle\Attempt 2 at working\x64\Debug\Fuzzlings Text adventure.exe
